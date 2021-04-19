@@ -7,52 +7,401 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta name="description" content="">
   <title>Resume</title>
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <link href="https://cdn.bootcss.com/font-awesome/4.7.0/fonts/fontawesome-webfont.svg">
-  <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./css/paper.min.css">
+  <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.3/css/all.css" rel="stylesheet">
   <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.0.0-beta2/css/bootstrap-grid.css" rel="stylesheet">
   <style>
+    :root {
+      --gray: #1f1f1f;
+      --yellow: #13c2c2;
+    }
+
+    h5,
+    h6 {
+      font-weight: 400;
+      margin: 0;
+    }
+
     html,
     body {
-      background-color: #f5f5f5;
+      background-color: #e6f7ff;
       margin: 0;
-      font-family: Avenir, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-      color: #333;
+      color: var(--gray);
       line-height: 1.5;
       font-size: 14px;
+    }
+
+    .row,
+    .row>* {
+      margin: 0;
+      padding: 0;
     }
 
     .page {
       max-width: 800px;
       margin: 20px auto;
-      padding: 10px 20px;
-      background-color: #fff;
       font-size: 14px;
     }
 
-    h1 {
-      margin: 20px -20px 20px;
-      padding-left: 15px;
-      border-left: 5px solid #F8B62D;
-      font-size: 18px;
+    .f {
+      display: flex;
+    }
+
+    .fl {
+      padding-left: 10px;
+      display: inline-flex;
+    }
+
+    .c {
+      justify-content: center;
+      align-items: center;
+    }
+
+    .w-f {
+      width: 100%;
+    }
+
+    .head {
+      height: 200px;
+    }
+
+    .bg-gray {
+      background: var(--gray);
+    }
+
+    .bg-yel {
+      background: var(--yellow);
+    }
+
+    .b-text {
+      font-weight: 100;
+      font-size: 32px;
+      color: var(--gray);
+      text-align: center;
+    }
+
+    .w-text {
+      font-weight: 100;
+      font-size: 32px;
+      color: #FFF;
+      text-align: center;
+    }
+
+    .half,
+    .half-r {
+      position: relative;
+      display: inline-block;
+      font-size: 32px;
+      color: black;
+      overflow: hidden;
+      white-space: pre;
+
+    }
+
+    .half:before {
+      display: block;
+      z-index: 1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 55%;
+      content: attr(data-content);
+      overflow: hidden;
+      background-color: var(--gray);
+      color: var(--yellow);
+    }
+
+    .half-r:before {
+      direction: rtl;
+      display: block;
+      z-index: 1;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 45%;
+      content: attr(data-content);
+      overflow: hidden;
+      background-color: var(--gray);
+      color: var(--yellow);
+    }
+
+    .bar {
+      width: 2px;
+      margin: 13px 10px 15px 10px;
+      background: var(--gray);
+    }
+
+    .fs {
+      align-items: stretch;
+    }
+
+    .cell-item {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      align-items: stretch;
+    }
+
+    .cell-item div div {
+      margin: 10px 0;
+    }
+
+    .cell-item div:nth-child(1) div {
+      text-align: center;
+      margin: 10px 0;
+    }
+
+    .title {
+      border-left: 10px solid var(--yellow);
+      padding-left: 20px;
+      margin-bottom: 5px;
+
+    }
+
+    table td {
+      border-top-color: var(--yellow) !important;
+      width: 25%;
+      font-family: Patrick Hand SC, sans-serif;
+    }
+
+    .line {
+      margin: 0 10px;
+      position: relative;
+      width: 1px;
+      background: var(--yellow);
+    }
+
+    .line::before {
+      content: ' ';
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      position: absolute;
+      background: var(--yellow);
+      top: 5px;
+      left: -5px;
+    }
+
+    .p-l {
+      color: var(--yellow);
+      text-align: right;
+      padding-right: 10px;
+    }
+
+    .p-r {
+      padding-left: 30px;
+    }
+
+    .t-r {
+      text-align: left;
+    }
+
+    .l-32 {
+      line-height: 32px;
+    }
+
+    .p-tl {
+      font-size: 28px;
+      line-height: 28px;
+      text-align: left;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .p-desci {
+      font-family: "Neucha", sans-serif;
+      color: #6c757d;
+      font-size: 12px;
+    }
+
+    ol {
+      font-size: 15px;
+      padding-left: 0;
+      line-height: 1.6;
+    }
+
+    .mark {
+      margin: 0 2px ;
+      color: var(--yellow);
+      background-image: none;
+      border-bottom-left-radius: 15px 3px;
+      border-bottom-right-radius: 15px 0px;
+      border-bottom-style: solid;
+      border-bottom-width: 2px;
     }
   </style>
 </head>
 
 <body class="">
-  <main class="page shadow-2">
-    <section>
-      <h1>联系方式</h1>
-      <div class="boxes">
-        <div class="box bg-gray-lightest p-y-0">
-          <div class="row g-32">
-            <div class="col-4 p-y-8 b-r-1">● 手机：13120180628</div>
-            <div class="col-4 p-y-8 b-r-1">● Email：nzb329@163.com</div>
-            <div class="col-4 p-y-8">● QQ/微信：123456789</div>
+
+  <main class="page">
+    <section class="head">
+      <div class="row head">
+        <div class="col-4 col f c bg-yel">
+          <div class="cell-item">
+            <div>
+              <div><i class="fas fa-mobile-alt"></i></div>
+              <div><i class="fas fa-envelope"></i></div>
+              <div><i class="fas fa-birthday-cake"></i></div>
+              <div><i class="fas fa-graduation-cap"></i></div>
+            </div>
+            <div class="bar"></div>
+            <div>
+              <div>+86-18380405035</div>
+              <div>540509089@qq.com</div>
+              <div>1993-01-14</div>
+              <div>本科</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-8 col f c bg-gray">
+          <div class="row w-f">
+            <div class="col-5 col w-text">杨杰</div>
+            <div class="col-7 col bg-yel b-text fl">
+              <span class="half" data-content="前">前</span>端开发工程师
+            </div>
           </div>
         </div>
       </div>
     </section>
+    <section>
+      <h3 class="title">教育经历</h3>
+      <table>
+        <tbody>
+          <tr>
+            <td>2012-09 ~ 2016-07</td>
+            <td>成都东软学院</td>
+            <td>软件工程</td>
+            <td>本科</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section>
+      <h3 class="title">工作经历</h3>
+      <table>
+        <tbody>
+          <tr>
+            <td>2020-07 ~ 至今</td>
+            <td>同程艺龙网络科技有限公司</td>
+            <td>酒旅事业部-客户端与CRM组</td>
+            <td>前端开发工程师</td>
+          </tr>
+          <tr>
+            <td>2019-04 ~ 2020-03</td>
+            <td>腾思信息科技有限公司</td>
+            <td>研发部</td>
+            <td>开发工程师</td>
+          </tr>
+          <tr>
+            <td>2016-02 ~ 2019-04</td>
+            <td>特步(中国)有限公司</td>
+            <td>信息中心-供应链管理部</td>
+            <td>中级开发工程师</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h3 class="title">项目经历</h3>
+      
+      <div class="panel row f w-full">
+        <div class="col-2 p-l">
+          <h5>同程艺龙</h5>
+          <h6>2021.02 ~ 至今</h6>
+        </div>
+        <div class="line col-1"></div>
+        <div class="col-9 p-r">
+          <article class="article">
+            <div class="p-tl">带客宝小程序开发</div>
+            <p class="p-desci">核心盈利项目，使商户可以付费提升自己酒店的曝光度、排名等。为了能及时做到热更新，实际上是套壳小程序+90%以上的H5开发</p>
+            <ol>
+              <li>基于社区调研，技术栈使用vue3+TypeScript+vuex+Vant+Tailwind</li>
+              <li>从0到1参与项目建设，对运行机制、交互流程、代码规范均有贡献，大量使用Composition Api，部分组件使用tsx</li>
+              <li>与设计同事协商对项目整体风格做出规范，对常用基色、辅色、字号等做出规范，搭配Tailwind生成配置，进行css原子化编码，开发效率和体验均大幅提升</li>
+              <li>调研并完成项目的无埋点技术实施</li>
+            </ol>
+          </article>
+        </div>
+      </div>
+
+      <div class="panel row f w-full">
+        <div class="col-2 p-l">
+          <h5>2020.09 ~ 至今</h5>
+        </div>
+        <div class="line col-1"></div>
+        <div class="col-9 p-r">
+          <article class="article">
+            <div class="p-tl">带客宝 CRM</div>
+            <p class="p-desci">带客宝移动端产品，纯flutter项目，也是公司的flutter试点项目</p>
+            <ol>
+              <li>从0开始学习flutter技术，还原设计稿并完成交互体验</li>
+              <li>对接整个推送系统，发现并定位现有的弹窗问题，独立完成弹出层调度器来解决多弹窗的场景</li>
+              <li>编写工具类完成整个项目的声明式埋点</li>
+            </ol>
+          </article>
+        </div>
+      </div>
+
+      <div class="panel row f w-full">
+        <div class="col-2 p-l">
+          <h5>2020.07 ~ 至今</h5>
+        </div>
+        <div class="line col-1"></div>
+        <div class="col-9 p-r">
+          <article class="article">
+            <div class="p-tl">E-booking Web Pc项目迭代开发</div>
+            <p class="p-desci">核心ToB业务，帮助商户进行酒店订单处理、酒店房态房价维护等业务。该项目由多个独立的java-web项目组成,开发时使用nginx反向代理连接项目,由于历史悠久需要兼容IE8
+            </p>
+            <ol>
+              <li>使用<a class="mark">avalon.js</a>作为mvvm框架，搭配jQuery进行刀耕火种式的开发，包括还原设计稿、设计交互过程</li>
+              <li>根据自己对mvvm的理解对项目做出了一定的代码、开发规范，包括更好的管理服务端渲染的变量，以及使用控制台来开发、做边界测试等(类比于vue的devtools)</li>
+              <li>在CI/CD流中加入构建脚本，基于gulpjs对java-web项目进行css/js文件压缩、添加版本戳、es6转es5等操作</li>
+            </ol>
+          </article>
+        </div>
+      </div>
+      <div class="panel row f w-full">
+        <div class="col-2 p-l">
+          <h5>2020.11 ~ 至今</h5>
+        </div>
+        <div class="line col-1"></div>
+        <div class="col-9 p-r">
+          <article class="article">
+            <div class="p-tl">E-booking Flutter</div>
+            <p class="p-desci">e-booking项目的移动端产品,混合Flutter应用，基于咸鱼的Flutter Boost将已有的ios和andriod项目改造成Flutter项目,由框架组的同事完成项目改造后在交由我们部门迭代
+            </p>
+            <ol>
+              <li>还原设计稿并完成交互设计,逐步将原生页面用dart重写</li>
+              <li>对接整个推送系统，并完善弹出层相关逻辑</li>
+            </ol>
+          </article>
+        </div>
+      </div>
+      
+      <section></section>
+      <div class="panel row f w-full">
+        <div class="col-2 p-l">
+          <h5>腾思信息科技</h5>
+          <h6>2019.04 ~ 2019.12</h6>
+        </div>
+        <div class="line col-1"></div>
+        <div class="col-9 p-r">
+          <article class="article">
+            <div class="p-tl">门店系统的二次开发和维护</div>
+            <ol>
+              <li>对react+dvaJs技术栈的web系统做额外功能开发和维护</li>
+              <li>针对客户的需求，完成需求分析、编码实现、测试、优化等全流程工作</li>
+            </ol>
+          </article>
+        </div>
+      </div>
+
+    </section>
+
   </main>
 
 </body>
