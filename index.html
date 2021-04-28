@@ -29,6 +29,7 @@
       color: var(--gray);
       line-height: 1.5;
       font-size: 14px;
+      font-family: Neucha, MicroSoft YaHei;
     }
 
     .row,
@@ -200,9 +201,13 @@
       line-height: 32px;
     }
 
+    .mb10 {
+      margin-bottom: 10px;
+    }
+
     .p-tl {
-      font-size: 28px;
-      line-height: 28px;
+      font-size: 22px;
+      line-height: 22px;
       text-align: left;
     }
 
@@ -217,19 +222,38 @@
     }
 
     ol {
+      margin-top: 5px;
       font-size: 15px;
       padding-left: 0;
       line-height: 1.6;
     }
+    ul {
+      padding-right: 10px;
+      margin-top: 5px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .divider {
+      margin-top: 10px;
+      border-top: 1px dashed var(--yellow);
+    }
 
     .mark {
-      margin: 0 2px ;
+      margin: 0 2px;
+      padding: 0;
       color: var(--yellow);
       background-image: none;
       border-bottom-left-radius: 15px 3px;
       border-bottom-right-radius: 15px 0px;
       border-bottom-style: solid;
       border-bottom-width: 2px;
+    }
+    a {
+      padding: 5px 4px;
+      color: var(--yellow) !important;
+      text-decoration: revert;
+      background-image: none;
     }
   </style>
 </head>
@@ -286,7 +310,7 @@
           <tr>
             <td>2020-07 ~ 至今</td>
             <td>同程艺龙网络科技有限公司</td>
-            <td>酒旅事业部-客户端与CRM组</td>
+            <td>酒旅事业部-商户端与CRM组</td>
             <td>前端开发工程师</td>
           </tr>
           <tr>
@@ -307,7 +331,8 @@
 
     <section>
       <h3 class="title">项目经历</h3>
-      
+
+      <div class="divider mb10"></div>
       <div class="panel row f w-full">
         <div class="col-2 p-l">
           <h5>同程艺龙</h5>
@@ -319,8 +344,8 @@
             <div class="p-tl">带客宝小程序开发</div>
             <p class="p-desci">核心盈利项目，使商户可以付费提升自己酒店的曝光度、排名等。为了能及时做到热更新，实际上是套壳小程序+90%以上的H5开发</p>
             <ol>
-              <li>基于社区调研，技术栈使用vue3+TypeScript+vuex+Vant+Tailwind</li>
-              <li>从0到1参与项目建设，对运行机制、交互流程、代码规范均有贡献，大量使用Composition Api，部分组件使用tsx</li>
+              <li>基于社区调研，技术栈使用<a class="mark">vue3+TypeScript+vuex+Vant+Tailwind</a></li>
+              <li>从0到1参与项目建设，对运行机制、交互流程、代码规范均有贡献，大量使用<a class="mark">Composition Api</a>，部分组件使用tsx</li>
               <li>与设计同事协商对项目整体风格做出规范，对常用基色、辅色、字号等做出规范，搭配Tailwind生成配置，进行css原子化编码，开发效率和体验均大幅提升</li>
               <li>调研并完成项目的无埋点技术实施</li>
             </ol>
@@ -338,7 +363,7 @@
             <div class="p-tl">带客宝 CRM</div>
             <p class="p-desci">带客宝移动端产品，纯flutter项目，也是公司的flutter试点项目</p>
             <ol>
-              <li>从0开始学习flutter技术，还原设计稿并完成交互体验</li>
+              <li>从0开始学习<a class="mark">flutter</a>技术，上手迅速，还原设计稿并完成交互体验</li>
               <li>对接整个推送系统，发现并定位现有的弹窗问题，独立完成弹出层调度器来解决多弹窗的场景</li>
               <li>编写工具类完成整个项目的声明式埋点</li>
             </ol>
@@ -354,12 +379,12 @@
         <div class="col-9 p-r">
           <article class="article">
             <div class="p-tl">E-booking Web Pc项目迭代开发</div>
-            <p class="p-desci">核心ToB业务，帮助商户进行酒店订单处理、酒店房态房价维护等业务。该项目由多个独立的java-web项目组成,开发时使用nginx反向代理连接项目,由于历史悠久需要兼容IE8
+            <p class="p-desci">核心ToB业务，帮助商户进行酒店订单处理、酒店房态房价维护等业务。该项目由多个独立的java-web项目组成，开发时使用nginx反向代理连接项目，由于历史悠久需要兼容IE8
             </p>
             <ol>
               <li>使用<a class="mark">avalon.js</a>作为mvvm框架，搭配jQuery进行刀耕火种式的开发，包括还原设计稿、设计交互过程</li>
-              <li>根据自己对mvvm的理解对项目做出了一定的代码、开发规范，包括更好的管理服务端渲染的变量，以及使用控制台来开发、做边界测试等(类比于vue的devtools)</li>
-              <li>在CI/CD流中加入构建脚本，基于gulpjs对java-web项目进行css/js文件压缩、添加版本戳、es6转es5等操作</li>
+              <li>根据自己对<a class="mark">mvvm</a>的理解对项目做出了一定的代码、开发规范，包括更好的管理服务端渲染的变量，以及使用控制台来开发、做边界测试等(类比于vue的devtools)</li>
+              <li>在CI/CD流中加入构建脚本，基于<a class="mark">gulpjs</a>对java-web项目进行css/js文件压缩、添加版本戳、es6转es5等操作，对开发无感知</li>
             </ol>
           </article>
         </div>
@@ -372,17 +397,18 @@
         <div class="col-9 p-r">
           <article class="article">
             <div class="p-tl">E-booking Flutter</div>
-            <p class="p-desci">e-booking项目的移动端产品,混合Flutter应用，基于咸鱼的Flutter Boost将已有的ios和andriod项目改造成Flutter项目,由框架组的同事完成项目改造后在交由我们部门迭代
+            <p class="p-desci">e-booking项目的移动端产品，混合Flutter应用，基于咸鱼的Flutter
+              Boost将已有的ios和andriod项目改造成Flutter项目，由框架组的同事完成项目改造后在交由我们部门迭代
             </p>
             <ol>
-              <li>还原设计稿并完成交互设计,逐步将原生页面用dart重写</li>
+              <li>还原设计稿并完成交互设计，逐步将原生页面用dart重写</li>
               <li>对接整个推送系统，并完善弹出层相关逻辑</li>
             </ol>
           </article>
         </div>
       </div>
-      
-      <section></section>
+
+      <br>
       <div class="panel row f w-full">
         <div class="col-2 p-l">
           <h5>腾思信息科技</h5>
@@ -393,15 +419,106 @@
           <article class="article">
             <div class="p-tl">门店系统的二次开发和维护</div>
             <ol>
-              <li>对react+dvaJs技术栈的web系统做额外功能开发和维护</li>
+              <li>对<a class="mark">react+dvaJs</a>技术栈的web系统做额外功能开发和维护</li>
               <li>针对客户的需求，完成需求分析、编码实现、测试、优化等全流程工作</li>
             </ol>
           </article>
         </div>
       </div>
+      <div class="panel row f w-full">
+        <div class="col-2 p-l">
+          <h5>2019.04 ~ 2019.12</h5>
+        </div>
+        <div class="line col-1"></div>
+        <div class="col-9 p-r">
+          <article class="article">
+            <div class="p-tl">321GO跑步小程序部分功能开发</div>
+            <ol>
+              <li>独立负责微信小程序的年度报表模块开发</li>
+            </ol>
+          </article>
+        </div>
+      </div>
+
+      <br>
+      <div class="panel row f w-full">
+        <div class="col-2 p-l">
+          <h5>特步(中国)有限公司</h5>
+          <h6>2016.02 ~ 2019.04</h6>
+        </div>
+        <div class="line col-1"></div>
+        <div class="col-9 p-r">
+          <article class="article">
+            <div class="p-tl">公司内部OA流程开发</div>
+            <p class="p-desci">公司自建的OA平台，基于servlet/jsp技术， 前端使用bui.js，数据库使用mysql</p>
+            <ol>
+              <li>与业务部门梳理需求并讨论、设计交付物</li>
+              <li>使用<a class="mark">JSP+JAVA+MYSQL</a>独立完成流程的前、后端编码实现</li>
+              <li>负责后续的运维处理和持续优化</li>
+            </ol>
+          </article>
+        </div>
+      </div>
+      <div class="panel row f w-full">
+        <div class="col-2 p-l">
+          <h5>2018.02 ~ 2019.01</h5>
+        </div>
+        <div class="line col-1"></div>
+        <div class="col-9 p-r">
+          <article class="article">
+            <div class="p-tl">公司SAP快反项目的设计、开发</div>
+            <p class="p-desci">公司使用sap作为erp系统，并购买第三方的预测模型来智能下达补货单</p>
+            <ol>
+              <li>负责公司SAP快反项目的设计、开发</li>
+              <li>积极与领导沟通，主动寻求资源解决技术问题，组织业务专家讨论实现细节</li>
+              <li>使用<a class="mark">Abap</a>语言进行<a class="mark">SAP RFC</a>接口开发，使用JAVA与SAP集成并对外暴露HTTP接口供第三方系统使用</li>
+            </ol>
+          </article>
+        </div>
+      </div>
+      <div class="panel row f w-full">
+        <div class="col-2 p-l">
+          <h5>2018.06 ~ 2019.04</h5>
+        </div>
+        <div class="line col-1"></div>
+        <div class="col-9 p-r">
+          <article class="article">
+            <div class="p-tl">PLM系统的配置、运维工作，并开发额外功能和报表</div>
+            <p class="p-desci">公司花费500W购买的PLM(Product Lifecycle Management)系统作为公司整体的解决方案，由乙方负责实施，甲乙双方共同完成定制化开发</p>
+            <ol>
+              <li>使用JS做前端配置并编写业务代码，使用JAVA/JSP做扩展开发，并参与数个重要功能开发，包括批量生成需求BOM，</li>
+              <li>对新系统学习掌握较快，是表现最为突出的甲方技术人员之一</li>
+            </ol>
+          </article>
+        </div>
+      </div>
+
 
     </section>
+    <section>
+      <h3 class="title">自我评价</h3>
+      <div class="divider"></div>
+      <ul>
+        <li>打杂工程师，对于B/S架构前后端均有涉猎，包括前端UI实现、交互设计、前后端数据请求响应、后端逻辑实现、SQL查询，重心在前端技术</li>
+        <li>对前端开发兴趣浓厚，有较好的基础知识，关注前端工程化、组件化以及JS新特性，关注前端流行框架及技术栈</li>
+        <li>关注算法，有刷题习惯，leetcode刷题数近100(<a href="https://leetcode-cn.com/u/nowell-yang/">jump to leetcode</a>)</li>
+        <li>有较好的责任心，能很好的做到“凡事有交代,事事有回音”并收到多个leader的肯定</li>
+        <li>主观能动性强，对于交代的任务善于主动沟通、主动寻求资源解决问题，有良好的团队协作能力以及沟通能力</li>
+      </ul>
+    </section>
 
+    <section>
+      <h3 class="title">附加信息</h3>
+      <div class="divider"></div>
+      <ul>
+        <li>个人碎片知识文档: <a href="http://jsrun.net/u/nowell">http://jsrun.net/u/nowell</a></li>
+        <li>2014.06 ACM 国际大学生程序设计竞赛 四川省省赛铜奖 </li>
+        <li>2017.01 特步（中国）有限公司信息中心 优秀新人奖</li>
+      </ul>
+    </section>
+
+    <div class="divider"></div>
+    <h6 class="text-center">over</h6>
   </main>
 
 </body>
